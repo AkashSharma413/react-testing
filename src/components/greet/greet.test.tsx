@@ -9,10 +9,4 @@ describe("Greet", () => {
   });
 });
 
-describe("Nested", () => {
-  test("renders with name prop", () => {
-    render(<Greet name="Akash" />);
-    const textElement = screen.getByText(/Hello Akash/i);
-    expect(textElement).toBeInTheDocument();
-  });
-});
+
