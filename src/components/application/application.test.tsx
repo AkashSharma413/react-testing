@@ -14,6 +14,11 @@ describe("Application", () => {
     });
     expect(sectionHeadingElement).toBeInTheDocument();
 
+    let paragraphElement = screen.getByText("All fields are mandatory.", {
+      selector: 'p'
+    });
+    expect(paragraphElement).toBeInTheDocument();
+
     let nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
