@@ -19,6 +19,9 @@ describe("Application", () => {
     });
     expect(paragraphElement).toBeInTheDocument();
 
+    let imageElement = screen.getByAltText("A person with laptop");
+    expect(imageElement).toBeInTheDocument();
+
     let nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
@@ -32,7 +35,7 @@ describe("Application", () => {
     let nameElement3 = screen.getByPlaceholderText("Fullname");
     expect(nameElement3).toBeInTheDocument();
 
-    let nameElement4 = screen.getByDisplayValue("Akash");
+    let nameElement4 = screen.getByDisplayValue("Akash"); 
     expect(nameElement4).toBeInTheDocument();
 
     let bioElement = screen.getByRole("textbox", {
