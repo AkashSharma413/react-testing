@@ -7,6 +7,7 @@ const Application = () => {
       <h2>Section 1</h2>
       <p>All fields are mandatory.</p>
       <img src="http://xyz.com/person.jpg" alt="A person with laptop"/>
+      <span title="close">X</span>
       <form>
         <div>
           <label htmlFor="name">Name</label>
