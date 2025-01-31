@@ -25,6 +25,9 @@ describe("Application", () => {
     let closeElement = screen.getByTitle("close");
     expect(closeElement).toBeInTheDocument();
 
+    let customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+
     let nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
