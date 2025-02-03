@@ -19,6 +19,9 @@ describe("Application", () => {
     });
     expect(paragraphElement).toBeInTheDocument();
 
+    let pElement = screen.getByText((content) => content.startsWith("All"));
+    expect(pElement).toBeInTheDocument();
+
     let imageElement = screen.getByAltText("A person with laptop");
     expect(imageElement).toBeInTheDocument();
 
