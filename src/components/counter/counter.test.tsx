@@ -50,5 +50,33 @@ describe("Counter", () => {
         await user.tripleClick(incrementButton);
         const countElement = screen.getByRole("heading");
         expect(countElement).toHaveTextContent("3");
+    });
+
+    test("Renders a count of 10 after user click the set button", async () => {
+        user.setup();
+        render(<Counter/>);
+        const amountElement = screen.getByRole("spinbutton");
+        await user.type(amountElement, "10");
+        expect(amountElement).toHaveValue(10);
+
+        const setButton = screen.getByRole("button", {name: "Set"});
+        await user.click(setButton);
+        const headingElement = screen.getByRole("heading");
+        expect(headingElement).toHaveTextContent("10");
+    });
+
+    test("Elements are focused in a right order", async () => {
+        user.setup();
+        render(<Counter/>);
+        const incrementButton = screen.getByRole("button", {name: "Increment"});
+        const amountElement = screen.getByRole("spinbutton");
+        const setButton = screen.getByRole("button", {name: "Set"});
+
+        await user.tab();
+        expect(incrementButton).toHaveFocus();
+        await user.tab();
+        expect(amountElement).toHaveFocus();
+        await user.tab();
+        expect(setButton).toHaveFocus();
     })
 })
