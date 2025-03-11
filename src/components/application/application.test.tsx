@@ -63,6 +63,7 @@ describe('Application', () => {
     expect(termElement2).toBeInTheDocument()
 
     let submitButtonElement = screen.getByRole('button')
+
     expect(submitButtonElement).toBeInTheDocument()
 
     // Comment
