@@ -32,7 +32,7 @@ const Application = () => {
             <input type="checkbox" id="terms" /> Accept the terms and condition
           </label>
         </div>
-        <button>Submit</button>
+        <button disabled>Submit</button>
       </form>
     </>
   );
