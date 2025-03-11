@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { skillsProp } from "./skills.type";
+import React, { useEffect, useState } from 'react'
+import { skillsProp } from './skills.type'
 
 const Skills = (props: skillsProp) => {
-  const { skills } = props;
-  const [isUserLoggedin, setIsUserLoggedin] = useState(false);
+  const { skills } = props
+  const [isUserLoggedin, setIsUserLoggedin] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setIsUserLoggedin(true);
-    }, 1001);
-  }, []);
+      setIsUserLoggedin(true)
+    }, 1001)
+  }, [])
 
   return (
     <>
       <ul>
         {skills.map((skill) => {
-          return <li key={skill}>{skill}</li>;
+          return <li key={skill}>{skill}</li>
         })}
       </ul>
       {isUserLoggedin ? (
@@ -24,7 +24,7 @@ const Skills = (props: skillsProp) => {
         <button onClick={() => setIsUserLoggedin(true)}>Login</button>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Application = () => {
   return (
@@ -6,13 +6,19 @@ const Application = () => {
       <h1>Job Application Form</h1>
       <h2>Section 1</h2>
       <p>All fields are mandatory.</p>
-      <img src="http://xyz.com/person.jpg" alt="A person with laptop"/>
+      <img src="http://xyz.com/person.jpg" alt="A person with laptop" />
       <span title="close">X</span>
       <div data-testid="custom-element">Custom HTML element</div>
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Fullname" value="Akash" onChange={() => {}}/>
+          <input
+            type="text"
+            id="name"
+            placeholder="Fullname"
+            value="Akash"
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>
@@ -35,7 +41,7 @@ const Application = () => {
         <button disabled>Submit</button>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default Application;
+export default Application

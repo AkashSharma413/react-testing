@@ -1,3 +1,3 @@
 export type UseCounterProp = {
-    initialCounter?: number
+  initialCounter?: number
 }
